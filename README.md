@@ -48,6 +48,10 @@ node serve.js
     ]
 }
 ```
+5. Run the unit test using the following command
+```
+npx jest
+```
 
 ## Running frontend Angular app
 1. Navigate to the project directory: Change into the project directory by running the following command:
