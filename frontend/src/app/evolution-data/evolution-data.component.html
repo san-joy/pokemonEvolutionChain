@@ -1,0 +1,22 @@
+<mat-card *ngIf="evolutionData" class="evolution-card">
+  <mat-card-content>
+    <h2 class="mat-h2">Evolution Chain for {{ evolutionData.name | titlecase }}</h2>
+    <ul>
+      <ng-container *ngFor="let variation of evolutionData.variations">
+        <li>
+          <span class="pokemon-name">{{ evolutionData.name | titlecase }}</span>
+          <mat-icon class="mat-icon">keyboard_arrow_right</mat-icon>
+          <span class="pokemon-name">{{ variation.name | titlecase }}</span>
+          <ul>
+            <ng-container *ngFor="let subVariation of variation.variations">
+              <li>
+                <mat-icon class="mat-icon">keyboard_arrow_right</mat-icon>
+                <span class="pokemon-name">{{ subVariation.name | titlecase }}</span>
+              </li>
+            </ng-container>
+          </ul>
+        </li>
+      </ng-container>
+    </ul>
+  </mat-card-content>
+</mat-card>

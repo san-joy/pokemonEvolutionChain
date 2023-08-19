@@ -1,0 +1,10 @@
+<mat-card>
+    <mat-card-content>
+    <mat-card-title>Find Pokémon's evolution chain</mat-card-title>
+    <mat-form-field>
+        <input matInput placeholder="Enter Pokémon Name" [(ngModel)]="pokemonName">
+    </mat-form-field>
+    <button mat-raised-button color="primary" [disabled]="pokemonName.length < 1" (click)="getEvolution()">Get Evolution</button>
+</mat-card-content>
+</mat-card>
+<app-evolution-data [evolutionData]="evolutionData"></app-evolution-data>
